@@ -1,5 +1,5 @@
 import socket
-import json, re
+import json, re, sys
 from _thread import *
 import threading
 
@@ -102,12 +102,10 @@ class server:
         return 'json', retval
     
 if __name__ == "__main__":
-    #set the base path that is required for a valid api call, i.e. /api/some_endpoint?
-    path = 'api'
-    #set the ip that the socket server will run on
-    ip = 'localhost'
-    #set the port the server will use
-    port = 10001
+    if len(sys.argv) < 2:
+        path = 'api'
+        ip = 'localhost'
+        port = 1234
 
     #start the server
     s = server(path, ip, port)
