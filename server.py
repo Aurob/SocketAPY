@@ -106,7 +106,10 @@ if __name__ == "__main__":
         path = 'api'
         ip = 'localhost'
         port = 1234
-
+    else:
+        path = sys.argv[1]
+        ip = sys.argv[2]
+        port = sys.argv[3]
     #start the server
     s = server(path, ip, port)
     s.start_server()
