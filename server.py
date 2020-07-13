@@ -105,7 +105,7 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         path = 'api'
         ip = 'localhost'
-        port = 1234
+        port = 10001
     else:
         path = sys.argv[1]
         ip = sys.argv[2]
